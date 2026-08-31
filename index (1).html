@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de Privacidade do jogo Skyes Demo, desenvolvido por Lkkziinnho.">
+  <meta name="robots" content="index, follow">
+  <title>Política de Privacidade — Skyes</title>
+
+  <style>
+    :root {
+      --bg: #090b14;
+      --card: #111526;
+      --card-2: #0d1020;
+      --text: #eef1ff;
+      --muted: #aeb5d2;
+      --accent: #8b6cff;
+      --accent-2: #53d6ff;
+      --border: rgba(139, 108, 255, 0.24);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(139, 108, 255, 0.15), transparent 35%),
+        radial-gradient(circle at 85% 10%, rgba(83, 214, 255, 0.10), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    .hero {
+      padding: 70px 20px 55px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .game-title {
+      margin: 0;
+      font-size: clamp(42px, 9vw, 76px);
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffffff, #b9a9ff 45%, #53d6ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      margin: 12px auto 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .updated {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      color: #cbd1eb;
+      background: rgba(17, 21, 38, 0.7);
+      font-size: 14px;
+    }
+
+    .demo {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(83, 214, 255, 0.08);
+      border: 1px solid rgba(83, 214, 255, 0.2);
+      color: #9eeaff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .container {
+      width: min(920px, calc(100% - 32px));
+      margin: 35px auto 70px;
+    }
+
+    .info-card, .section {
+      background: linear-gradient(180deg, rgba(17, 21, 38, 0.96), rgba(13, 16, 32, 0.96));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-card {
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .info-item {
+      padding: 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .label {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .section {
+      padding: 30px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 22px;
+      margin-right: 10px;
+      vertical-align: -3px;
+      border-radius: 4px;
+      background: linear-gradient(#8b6cff, #53d6ff);
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: #d4d8ea;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 24px;
+      color: #d4d8ea;
+    }
+
+    li { margin: 5px 0; }
+
+    .highlight {
+      border-color: rgba(83, 214, 255, 0.28);
+    }
+
+    .contact-email {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 11px 15px;
+      border-radius: 10px;
+      background: rgba(83, 214, 255, 0.07);
+      border: 1px solid rgba(83, 214, 255, 0.16);
+      color: #53d6ff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    footer {
+      padding: 28px 20px 45px;
+      text-align: center;
+      color: #7f87a8;
+      font-size: 13px;
+    }
+
+    .top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(17, 21, 38, 0.92);
+      border: 1px solid var(--border);
+      color: #fff;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+    }
+
+    @media (max-width: 700px) {
+      .hero { padding: 48px 18px 40px; }
+
+      .info-grid { grid-template-columns: 1fr; }
+
+      .container {
+        width: min(100% - 20px, 920px);
+        margin-top: 22px;
+      }
+
+      .section, .info-card {
+        padding: 21px;
+        border-radius: 14px;
+      }
+
+      h2 { font-size: 21px; }
+
+      .subtitle { font-size: 16px; }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="hero">
+    <h1 class="game-title">Skyes</h1>
+    <p class="subtitle">Política de Privacidade</p>
+    <span class="demo">VERSÃO DEMO / TESTE</span><br>
+    <span class="updated">Última atualização: 31 de agosto de 2026</span>
+  </header>
+
+  <main class="container">
+
+    <section class="info-card">
+      <div class="info-grid">
+        <div class="info-item">
+          <span class="label">Aplicativo</span>
+          <span class="value">Skyes</span>
+        </div>
+
+        <div class="info-item">
+          <span class="label">Desenvolvedor</span>
+          <span class="value">Lkkziinnho</span>
+        </div>
+
+        <div class="info-item">
+          <span class="label">Contato</span>
+          <span class="value">l.d.gstd@gmail.com</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section highlight">
+      <h2>1. Sobre o Skyes</h2>
+      <p>
+        O <strong>Skyes</strong> é um jogo gratuito atualmente disponibilizado em
+        <strong>versão Demo/Teste</strong>, desenvolvido por <strong>Lkkziinnho</strong>.
+      </p>
+      <p>
+        Esta Política de Privacidade explica de forma transparente como as informações
+        são tratadas durante a utilização do jogo.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>2. Coleta de informações pessoais</h2>
+      <p>
+        Na versão atual do Skyes, o aplicativo não solicita diretamente informações
+        pessoais como nome completo, endereço, número de telefone, documentos de
+        identificação ou informações bancárias.
+      </p>
+      <p>
+        O jogo também não exige a criação de uma conta de usuário para ser utilizado.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>3. Dados do jogo armazenados no dispositivo</h2>
+      <p>
+        Para permitir que o jogador continue seu progresso, o Skyes pode armazenar
+        informações do jogo localmente no dispositivo.
+      </p>
+      <p>Essas informações podem incluir:</p>
+      <ul>
+        <li>progresso do jogo;</li>
+        <li>nível e experiência do personagem;</li>
+        <li>atributos e características do personagem;</li>
+        <li>posição do personagem;</li>
+        <li>itens e inventário;</li>
+        <li>equipamentos e runas;</li>
+        <li>configurações do jogo;</li>
+        <li>outros dados necessários para salvar e restaurar o progresso.</li>
+      </ul>
+      <p>
+        Esses dados são utilizados exclusivamente para o funcionamento do jogo e para
+        manter o progresso do jogador.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>4. Armazenamento local</h2>
+      <p>
+        Os dados de progresso do Skyes são armazenados localmente no dispositivo,
+        conforme as funcionalidades disponíveis na versão atual do jogo.
+      </p>
+      <p>
+        O desenvolvedor não utiliza esses dados locais para vender informações pessoais
+        ou para fins publicitários.
+      </p>
+      <p>
+        A limpeza dos dados do aplicativo ou a desinstalação do jogo poderá apagar o
+        progresso armazenado localmente.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>5. Publicidade</h2>
+      <p>
+        <strong>A versão atual Demo/Teste do Skyes não possui anúncios.</strong>
+      </p>
+      <p>
+        Não há, nesta versão, serviço de publicidade integrado ao aplicativo.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>6. Compras e pagamentos</h2>
+      <p>
+        <strong>A versão atual do Skyes não possui compras dentro do aplicativo,
+        sistema de pagamento ou assinatura.</strong>
+      </p>
+      <p>
+        O jogo é disponibilizado gratuitamente nesta versão Demo/Teste.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>7. Contas e login</h2>
+      <p>
+        A versão atual do Skyes não exige criação de conta, cadastro ou login para
+        jogar.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>8. Compartilhamento de dados</h2>
+      <p>
+        O desenvolvedor <strong>não vende, aluga ou comercializa informações pessoais
+        dos usuários</strong>.
+      </p>
+      <p>
+        Os dados de progresso armazenados localmente no dispositivo não são enviados
+        pelo desenvolvedor para terceiros na versão atual do jogo.
+      </p>
+      <p>
+        Caso funcionalidades futuras introduzam serviços externos que alterem essa
+        situação, esta Política de Privacidade será atualizada.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>9. Serviços de terceiros</h2>
+      <p>
+        A versão atual do Skyes não utiliza serviços de terceiros destinados à
+        publicidade, compras, pagamentos ou criação de contas de usuário.
+      </p>
+      <p>
+        Caso novos serviços sejam incorporados ao jogo no futuro, a política será
+        revisada para refletir o tratamento de dados realizado por esses serviços.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>10. Dados técnicos</h2>
+      <p>
+        A versão atual do jogo não solicita diretamente dados pessoais do usuário.
+      </p>
+      <p>
+        O sistema operacional ou a plataforma de distribuição do aplicativo pode
+        processar determinadas informações técnicas necessárias para fornecer seus
+        próprios serviços. Esse tratamento é realizado de acordo com as políticas
+        correspondentes da plataforma.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>11. Segurança</h2>
+      <p>
+        Adotamos medidas razoáveis para proteger as informações utilizadas pelo jogo.
+      </p>
+      <p>
+        Como os dados de progresso são armazenados localmente, a proteção desses dados
+        também depende dos mecanismos de segurança do dispositivo utilizado pelo jogador.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>12. Retenção e exclusão de dados</h2>
+      <p>
+        Os dados de progresso permanecem no dispositivo enquanto forem necessários para
+        manter o funcionamento e o progresso do jogo.
+      </p>
+      <p>
+        O usuário pode excluir os dados locais utilizando as opções do sistema
+        operacional, como limpar os dados do aplicativo ou desinstalar o Skyes.
+      </p>
+      <p>
+        A exclusão desses dados poderá resultar na perda do progresso salvo.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>13. Privacidade de crianças</h2>
+      <p>
+        O Skyes não solicita intencionalmente informações pessoais de crianças.
+      </p>
+      <p>
+        Caso um responsável tenha alguma preocupação relacionada à privacidade de uma
+        criança durante o uso do aplicativo, poderá entrar em contato conosco pelo
+        e-mail informado nesta política.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>14. Links externos</h2>
+      <p>
+        Caso o aplicativo venha a disponibilizar links para sites ou serviços externos,
+        esses serviços poderão possuir suas próprias políticas de privacidade.
+      </p>
+      <p>
+        O desenvolvedor não é responsável pelas práticas de privacidade de serviços
+        externos.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>15. Alterações nesta Política de Privacidade</h2>
+      <p>
+        Esta Política de Privacidade poderá ser atualizada quando novas funcionalidades,
+        serviços ou sistemas forem adicionados ao Skyes.
+      </p>
+      <p>
+        A data da última atualização será modificada sempre que esta política sofrer
+        alterações relevantes.
+      </p>
+    </section>
+
+    <section class="section contact highlight">
+      <h2>16. Contato</h2>
+      <p>
+        Caso tenha dúvidas, sugestões ou solicitações relacionadas à privacidade,
+        entre em contato:
+      </p>
+      <p><strong>Desenvolvedor:</strong> Lkkziinnho</p>
+      <p><strong>Jogo:</strong> Skyes</p>
+      <p><strong>Versão:</strong> Demo/Teste</p>
+
+      <a class="contact-email" href="mailto:l.d.gstd@gmail.com">
+        l.d.gstd@gmail.com
+      </a>
+    </section>
+
+    <section class="section">
+      <h2>17. Aceitação</h2>
+      <p>
+        Ao utilizar o Skyes, o usuário declara estar ciente desta Política de Privacidade.
+      </p>
+      <p>
+        Caso não concorde com os termos apresentados, o usuário poderá deixar de
+        utilizar o aplicativo e removê-lo do dispositivo.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div><strong>Skyes</strong> — Política de Privacidade</div>
+    <div>Desenvolvedor: Lkkziinnho · l.d.gstd@gmail.com</div>
+    <div>Versão Demo/Teste</div>
+    <div>Última atualização: 31 de agosto de 2026</div>
+  </footer>
+
+  <a class="top" href="#top" aria-label="Voltar ao topo">↑</a>
+
+</body>
+</html>
